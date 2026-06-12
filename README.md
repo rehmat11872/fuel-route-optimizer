@@ -76,36 +76,129 @@ Postman setup:
 
 ```json
 {
-  "start_location": {"query": "Los Angeles, CA", "latitude": 34.05, "longitude": -118.24},
-  "end_location": {"query": "Dallas, TX", "latitude": 32.77, "longitude": -96.79},
-  "route": {
-    "distance_miles": 1435.2,
-    "duration_minutes": 1280.5,
-    "bbox": [-118.4, 32.1, -96.7, 35.2],
-    "geometry": [[-118.24, 34.05], [-117.9, 34.1]]
-  },
-  "vehicle": {
-    "max_range_miles": 500,
-    "mpg": 10,
-    "gallons_required": 143.52
-  },
-  "fuel_stops": [
-    {
-      "station_id": "20",
-      "name": "PILOT TRAVEL CENTER #1243",
-      "address": "I-8, EXIT 119 & SR-85",
-      "city": "Gila Bend",
-      "state": "AZ",
-      "latitude": 32.94,
-      "longitude": -112.72,
-      "route_mile": 460,
-      "detour_miles": 4.8,
-      "price_per_gallon": 3.899,
-      "gallons_to_buy": 50,
-      "estimated_cost": 194.95
+    "start_location": {
+        "query": "Los Angeles, CA",
+        "latitude": 34.05513,
+        "longitude": -118.25703
+    },
+    "end_location": {
+        "query": "Dallas, TX",
+        "latitude": 32.736212,
+        "longitude": -96.784359
+    },
+    "route": {
+        "distance_miles": 1443.93,
+        "duration_minutes": 1326.15,
+        "bbox": [
+            -118.266787,
+            31.035543,
+            -96.78439,
+            34.087306
+        ],
+        "geometry": [
+            [
+                -118.25702,
+                34.05513
+            ],
+            [
+                -118.25732,
+                34.0548
+            ],
+            [
+                -118.25868,
+                34.05316
+            ],
+            [
+                -118.25959,
+                34.05233
+            ],
+            [
+                -96.78891,
+                32.73895
+            ],
+            [
+                -96.78826,
+                32.73846
+            ],
+            [
+                -96.78797,
+                32.73819
+            ],
+            [
+                -96.78777,
+                32.73796
+            ],
+            [
+                -96.78722,
+                32.73718
+            ],
+            [
+                -96.78696,
+                32.73674
+            ],
+            [
+                -96.78659,
+                32.73619
+            ],
+            [
+                -96.78607,
+                32.73525
+            ],
+            [
+                -96.78549,
+                32.73552
+            ],
+            [
+                -96.78439,
+                32.73606
+            ],
+            [
+                -96.78445,
+                32.73614
+            ]
+        ]
+    },
+    "vehicle": {
+        "max_range_miles": 500.0,
+        "mpg": 10.0,
+        "gallons_required": 144.39
+    },
+    "fuel_stops": [
+        {
+            "station_id": "71030",
+            "name": "QUIKTRIP #1469",
+            "address": "I-10, EXIT 248 & SR-77",
+            "city": "Marana",
+            "state": "AZ",
+            "latitude": 32.423447,
+            "longitude": -111.165674,
+            "route_mile": 460.0,
+            "detour_miles": 9.25,
+            "price_per_gallon": 3.062,
+            "gallons_to_buy": 50.0,
+            "estimated_cost": 153.12
+        },
+        {
+            "station_id": "69633",
+            "name": "ONE9 EXPRESS FUEL",
+            "address": "I-10, EXIT 42 & FM-1110",
+            "city": "Clint",
+            "state": "TX",
+            "latitude": 31.60512,
+            "longitude": -106.10248,
+            "route_mile": 920.0,
+            "detour_miles": 80.49,
+            "price_per_gallon": 2.802,
+            "gallons_to_buy": 50.0,
+            "estimated_cost": 140.12
+        }
+    ],
+    "estimated_total_fuel_cost": 423.41,
+    "metadata": {
+        "routing_provider": "OpenRouteService",
+        "external_api_usage": "Cold request uses start geocode, end geocode, and one route request. Trips requiring fuel stops also reverse-geocode target stop areas and may geocode a bounded set of candidate stations; all provider results are cached.",
+        "fuel_station_strategy": "Preload CSV once, sample refuel points before the 500-mile range is reached, geocode a small price-sorted candidate set, and choose the first station within the configured route radius."
     }
-  ],
-  "estimated_total_fuel_cost": 559.66
 }
 ```
 
